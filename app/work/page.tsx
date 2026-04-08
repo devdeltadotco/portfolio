@@ -5,12 +5,19 @@ import { PageHero } from "@/components/site/page-hero";
 import { SiteChrome } from "@/components/site/site-chrome";
 import { SpotlightSection } from "@/components/site/spotlight-section";
 import { workPage } from "@/content/pages";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Work | DevDelta",
+export const metadata = buildPageMetadata({
   description:
-    "See the kinds of products DevDelta helps teams launch and the delivery model behind our MVP work.",
-};
+    "See the startup MVPs, internal tools, and AI workflow products DevDelta builds for fast-moving teams.",
+  keywords: [
+    "MVP development services",
+    "AI workflow product development",
+    "startup product build services",
+  ],
+  path: "/work",
+  title: "Work",
+}) satisfies Metadata;
 
 export default function WorkPage() {
   return (

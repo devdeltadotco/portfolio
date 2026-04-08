@@ -5,12 +5,19 @@ import { PageHero } from "@/components/site/page-hero";
 import { SiteChrome } from "@/components/site/site-chrome";
 import { SpotlightSection } from "@/components/site/spotlight-section";
 import { contactPage } from "@/content/pages";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact Us | DevDelta",
+export const metadata = buildPageMetadata({
   description:
-    "Contact DevDelta to discuss your MVP, launch constraints, and the fastest route to a credible first release.",
-};
+    "Contact DevDelta about MVP development, product discovery, or a launch sprint for your startup or internal tool.",
+  keywords: [
+    "contact MVP development studio",
+    "startup product consultation",
+    "book MVP discovery call",
+  ],
+  path: "/contact-us",
+  title: "Contact Us",
+}) satisfies Metadata;
 
 export default function ContactUsPage() {
   return (

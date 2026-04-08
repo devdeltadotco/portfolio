@@ -489,7 +489,7 @@ export const projectsPage = {
 export const contactPage = {
   ctaBanner: {
     cta: {
-      href: "mailto:hello@devdelta.studio",
+      href: "mailto:karthik@devdelta.co",
       label: "Email us directly",
       emoji: "💌",
       hoverEmoji: "📨",
@@ -505,7 +505,7 @@ export const contactPage = {
     panelEyebrow: "What to send",
     panelTitle: "A clear goal beats a perfect brief every time.",
     primaryCta: {
-      href: "mailto:hello@devdelta.studio",
+      href: "mailto:karthik@devdelta.co",
       label: "Email your brief",
       emoji: "📨",
       hoverEmoji: "⚡",
@@ -527,8 +527,8 @@ export const contactPage = {
   methods: [
     {
       cta: {
-        href: "mailto:hello@devdelta.studio",
-        label: "hello@devdelta.studio",
+        href: "mailto:karthik@devdelta.co",
+        label: "karthik@devdelta.co",
         emoji: "✉️",
         hoverEmoji: "🚀",
       },
@@ -539,8 +539,8 @@ export const contactPage = {
     },
     {
       cta: {
-        href: "tel:+14155550147",
-        label: "+1 (415) 555-0147",
+        href: "tel:+919493454298",
+        label: "+91 949 345 4298",
         emoji: "📞",
         hoverEmoji: "✨",
       },

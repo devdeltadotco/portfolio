@@ -5,12 +5,19 @@ import { PageHero } from "@/components/site/page-hero";
 import { SiteChrome } from "@/components/site/site-chrome";
 import { SpotlightSection } from "@/components/site/spotlight-section";
 import { aboutPage } from "@/content/pages";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About | DevDelta",
+export const metadata = buildPageMetadata({
   description:
-    "Learn how DevDelta works, how the team runs product sprints, and what founders can expect from an MVP engagement.",
-};
+    "Learn how DevDelta works as an AI-assisted MVP development studio for founders who need strategy, design, and engineering in one sprint.",
+  keywords: [
+    "about DevDelta",
+    "MVP development team",
+    "startup product studio process",
+  ],
+  path: "/about",
+  title: "About",
+}) satisfies Metadata;
 
 export default function AboutPage() {
   return (

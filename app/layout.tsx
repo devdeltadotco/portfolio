@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { Manrope, Space_Grotesk } from "next/font/google";
 
+import {
+  absoluteUrl,
+  defaultKeywords,
+  serializeJsonLd,
+  siteConfig,
+  siteOgImage,
+} from "@/lib/seo";
+
 import "./globals.css";
 
 const manrope = Manrope({
@@ -14,9 +22,81 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "DevDelta | Launch your MVP in 100 hours",
-  description:
-    "DevDelta is a fast-moving product studio for founders who need an MVP launched with clarity, speed, and senior execution.",
+  alternates: {
+    canonical: siteConfig.siteUrl,
+  },
+  applicationName: siteConfig.name,
+  category: "technology",
+  creator: siteConfig.name,
+  description: siteConfig.description,
+  keywords: defaultKeywords,
+  metadataBase: new URL(siteConfig.siteUrl),
+  openGraph: {
+    description: siteConfig.description,
+    images: [siteOgImage],
+    locale: siteConfig.locale,
+    siteName: siteConfig.name,
+    title: `${siteConfig.name} | ${siteConfig.tagline}`,
+    type: "website",
+    url: siteConfig.siteUrl,
+  },
+  publisher: siteConfig.name,
+  robots: {
+    follow: true,
+    googleBot: {
+      follow: true,
+      index: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+    index: true,
+  },
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    description: siteConfig.description,
+    images: [siteOgImage.url],
+    title: `${siteConfig.name} | ${siteConfig.tagline}`,
+  },
+};
+
+const siteJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": absoluteUrl("/#organization"),
+      "@type": "Organization",
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          contactType: "sales",
+          email: siteConfig.contact.email,
+          telephone: siteConfig.contact.phone,
+          url: absoluteUrl("/contact-us"),
+        },
+      ],
+      description: siteConfig.description,
+      email: siteConfig.contact.email,
+      name: siteConfig.name,
+      telephone: siteConfig.contact.phone,
+      url: siteConfig.siteUrl,
+    },
+    {
+      "@id": absoluteUrl("/#website"),
+      "@type": "WebSite",
+      description: siteConfig.description,
+      inLanguage: "en",
+      name: siteConfig.name,
+      publisher: {
+        "@id": absoluteUrl("/#organization"),
+      },
+      url: siteConfig.siteUrl,
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -29,7 +109,15 @@ export default function RootLayout({
       className={`${manrope.variable} ${spaceGrotesk.variable} h-full bg-background antialiased`}
       lang="en"
     >
-      <body className="min-h-full bg-background text-ink">{children}</body>
+      <body className="min-h-full bg-background text-ink">
+        <script
+          dangerouslySetInnerHTML={{
+            __html: serializeJsonLd(siteJsonLd),
+          }}
+          type="application/ld+json"
+        />
+        {children}
+      </body>
     </html>
   );
 }

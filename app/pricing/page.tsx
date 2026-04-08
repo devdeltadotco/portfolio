@@ -7,12 +7,19 @@ import { SiteChrome } from "@/components/site/site-chrome";
 import { SpotlightSection } from "@/components/site/spotlight-section";
 import { pricingPage } from "@/content/pages";
 import { siteContent } from "@/content/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Pricing | DevDelta",
+export const metadata = buildPageMetadata({
   description:
-    "Review DevDelta's pricing approach, common engagement models, and what is included in a launch-focused MVP sprint.",
-};
+    "Review pricing for DevDelta's MVP development services, discovery sprints, and launch-focused product builds.",
+  keywords: [
+    "MVP development pricing",
+    "startup MVP cost",
+    "product discovery sprint pricing",
+  ],
+  path: "/pricing",
+  title: "Pricing",
+}) satisfies Metadata;
 
 export default function PricingPage() {
   return (

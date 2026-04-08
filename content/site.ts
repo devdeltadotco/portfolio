@@ -111,7 +111,7 @@ export const siteContent: SiteContent = {
   hero: {
     badge: "🚀 AI-assisted shipping partner",
     description:
-      "We use AI across discovery, design, engineering, QA, and handoff so fuzzy startup briefs turn into launch-ready MVPs much faster.",
+      "DevDelta is an AI-assisted MVP development studio for founders who need discovery, design, engineering, QA, and handoff aligned around a fast launch.",
     guaranteeDescription:
       "AI handles the heavy repetition across the sprint, while senior oversight keeps scope, tradeoffs, and delivery accountable from kickoff to handoff.",
     guaranteeEyebrow: "Fixed & reliable",
@@ -129,30 +129,30 @@ export const siteContent: SiteContent = {
       hoverEmoji: "👀",
     },
     supportingNote:
-      "AI-first execution helps us compress planning and shipping without hiding the tradeoffs.",
+      "AI-first execution compresses product discovery and shipping without hiding the tradeoffs.",
     timelineBars: [
       { height: "34%", label: "Plan" },
       { height: "52%", label: "Design" },
       { height: "72%", label: "Build" },
       { height: "92%", label: "Launch" },
     ],
-    title: "Launch your MVP only in 100 hours",
+    title: "Launch your MVP in 100 hours",
   },
   featureIntro: {
     description:
-      "We run AI through product discovery, interface exploration, implementation, and QA so early teams can validate ideas without dragging through a long agency cycle.",
+      "We run AI through product discovery, interface exploration, implementation, and QA so startup teams can validate ideas with a launch-ready MVP instead of a long agency cycle.",
     eyebrow: "✨ Built for founders with momentum",
-    title: "Provide the best service with out-of-the-box ideas",
+    title: "AI-assisted MVP development for founders moving fast",
   },
   videoHighlight: {
     description:
-      "A tight AI-assisted sprint preview that maps your product goals into a concrete roadmap, interface direction, and delivery sequence before the build starts.",
+      "A tight sprint walkthrough that maps your product goals into a concrete roadmap, interface direction, and delivery sequence before the build starts.",
     eyebrow: "🎬 Part 1",
-    title: "How to get started",
+    title: "How DevDelta scopes, designs, and launches an MVP",
   },
   faq: {
     description:
-      "We work with an AI-first sprint model, so expectations stay clear and delivery moves much faster from day one.",
+      "We work with an AI-first MVP sprint model, so expectations stay clear and delivery moves much faster from day one.",
     items: [
       {
         answer:
@@ -231,8 +231,8 @@ export const siteContent: SiteContent = {
       },
     ],
     contacts: [
-      { label: "Phone", value: "+1 (415) 555-0147" },
-      { label: "Email", value: "hello@devdelta.studio" },
+      { label: "Phone", value: "+91 949 345 4298" },
+      { label: "Email", value: "karthik@devdelta.co" },
       { label: "Base", value: "Remote between Bangalore and San Francisco" },
     ],
     intro:
