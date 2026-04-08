@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  --background: #edf6f9;
+  --background-rgb: 237, 246, 249;
+  --surface: rgba(237, 246, 249, 0.82);
+  --surface-strong: #edf6f9;
+  --foreground: #111111;
+  --foreground-rgb: 17, 17, 17;
+  --muted: rgba(17, 17, 17, 0.68);
+  --line: rgba(17, 17, 17, 0.12);
+  --accent: #ff9e00;
+  --accent-rgb: 255, 158, 0;
+  --accent-soft: rgba(226, 149, 120, 0.18);
+  --contrast: #111111;
+  --contrast-foreground: #edf6f9;
+  --shadow-soft: 0 28px 60px rgba(17, 17, 17, 0.12);
+  --shadow-strong: 0 32px 80px rgba(17, 17, 17, 0.28);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-contrast: var(--contrast);
+  --color-contrast-foreground: var(--contrast-foreground);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-space-grotesk);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(226, 149, 120, 0.1),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(226, 149, 120, 0.14),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(17, 17, 17, 0.04),
+      transparent 24%
+    ),
+    linear-gradient(180deg, #edf6f9 0%, #edf6f9 100%);
+  color: var(--foreground);
+  font-family: var(--font-manrope), sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: rgba(226, 149, 120, 0.28);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.surface-card {
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(20px);
+}
+
+.dark-card {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(237, 246, 249, 0.14),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(226, 149, 120, 0.18),
+      transparent 28%
+    ),
+    linear-gradient(145deg, rgba(17, 17, 17, 1) 0%, rgba(17, 17, 17, 0.92) 100%);
+  box-shadow: var(--shadow-strong);
+}
+
+.page-grid {
+  background-image:
+    linear-gradient(rgba(17, 17, 17, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.06) 1px, transparent 1px);
+  background-position: center;
+  background-size: 42px 42px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
