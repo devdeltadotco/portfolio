@@ -77,28 +77,27 @@ export const aboutPage = {
   cards: [
     {
       description:
-        "Before a single screen gets polished, we lock the problem, the user flow, and the tradeoffs that define the sprint.",
+        "We define the problem, flow, and tradeoffs before design starts.",
       eyebrow: "01",
       title: "Scope clarity before speed",
     },
     {
       description:
-        "You work directly with the people shipping the product. No handoff layers, no account-manager relay, no diluted decisions.",
+        "You work directly with the builders. No handoffs. No relay layers.",
       eyebrow: "02",
       title: "Senior execution throughout",
     },
     {
-      description:
-        "Everything is designed to survive the next version, so the MVP can evolve instead of being thrown away after validation.",
+      description: "We build for the next version, not just the first.",
       eyebrow: "03",
       title: "Built to extend cleanly",
     },
   ],
   cardsIntro: {
     description:
-      "The studio is intentionally compact and AI-first, so strategy, design, and engineering stay aligned while the product moves much faster.",
+      "We stay small and AI-first. Strategy, design, and engineering stay aligned.",
     eyebrow: "⚙️ How we work",
-    title: "A lean team with a founder-speed operating model",
+    title: "A lean team. High ownership.",
   },
   ctaBanner: {
     cta: {
@@ -107,15 +106,15 @@ export const aboutPage = {
       emoji: "🏁",
       hoverEmoji: "🚀",
     },
-    title: "Want to work with the team behind the sprint?",
+    title: "Need senior builders on your next phase?",
   } satisfies CtaBannerContent,
   hero: {
     description:
-      "DevDelta acts like an AI-first product squad for early-stage teams that need an MVP launched fast without losing technical judgment.",
+      "DevDelta is an AI-first product squad for teams that need fast delivery, sound architecture, and software that scales.",
     eyebrow: "🧠 About DevDelta",
     panelDescription:
-      "We combine product strategy, interface design, and implementation in one AI-assisted loop, so the product does not get passed between disconnected specialists.",
-    panelEyebrow: "What founders get",
+      "Strategy, design, and implementation stay in one loop. Nothing gets lost in handoffs.",
+    panelEyebrow: "What teams get",
     panelTitle: "AI speed. Senior judgment. Zero agency drag.",
     primaryCta: {
       href: "/contact-us",
@@ -130,24 +129,24 @@ export const aboutPage = {
       hoverEmoji: "🛠️",
     },
     stats: [
-      { label: "Typical MVP sprint", value: "100h" },
-      { label: "Kickoff turnaround", value: "48h" },
-      { label: "Accountable delivery team", value: "1" },
+      { label: "Typical sprint", value: "100h" },
+      { label: "Kickoff time", value: "48h" },
+      { label: "Delivery team", value: "1" },
       { label: "Structured checkpoints", value: "Weekly" },
     ],
-    title: "Senior product thinking with launch-speed execution",
+    title: "Senior thinking. Scalable execution.",
   } satisfies PageHeroContent,
   spotlight: {
     description:
-      "We keep communication lightweight but explicit, using AI to remove repetitive work so founders always know what changed, what is blocked, and what matters next.",
+      "Communication stays light and clear. You always know what changed, what is blocked, and what is next.",
     eyebrow: "Inside the engagement",
     items: [
-      "Decision log for scope, tradeoffs, and assumptions",
-      "Fast review loops with compact async updates",
-      "Design and engineering developed together, not sequentially",
-      "Clean handoff notes so your next sprint starts from clarity",
+      "Scope, tradeoffs, and assumptions are documented",
+      "Reviews stay fast and focused",
+      "Design and engineering move together",
+      "Every sprint ends with clear handoff notes",
     ],
-    title: "Working with us should feel like momentum, not overhead",
+    title: "Momentum without overhead",
   } satisfies SpotlightContent,
 };
 
@@ -155,28 +154,28 @@ export const workPage = {
   cards: [
     {
       description:
-        "Fast validation builds for founders who need a usable product in market, not a six-month roadmap deck.",
+        "Fast product builds for teams that need a usable release quickly.",
       eyebrow: "Build type",
-      title: "Founder MVPs",
+      title: "Product launches",
     },
     {
       description:
-        "Operations dashboards, internal workflows, and team tooling that remove friction inside early-stage companies.",
+        "Internal systems that reduce friction across teams and operations.",
       eyebrow: "Build type",
-      title: "Internal products",
+      title: "Internal systems",
     },
     {
       description:
-        "AI-assisted prototypes and workflow tools where model behavior, UX clarity, and reliability need to be shaped together.",
+        "AI products where UX, reliability, and integrations must work together.",
       eyebrow: "Build type",
-      title: "AI workflow products",
+      title: "AI workflow platforms",
     },
   ],
   cardsIntro: {
     description:
-      "We focus on product categories where AI can accelerate research, design, engineering, and QA without compromising what ships after launch.",
+      "We use AI to speed research, design, engineering, and QA. Quality stays controlled.",
     eyebrow: "🚀 What we ship",
-    title: "The kinds of products we help teams launch",
+    title: "What we build",
   },
   ctaBanner: {
     cta: {
@@ -185,16 +184,16 @@ export const workPage = {
       emoji: "🧩",
       hoverEmoji: "🚀",
     },
-    title: "Need a launch plan for your next build?",
+    title: "Need a plan for your next build?",
   } satisfies CtaBannerContent,
   hero: {
     description:
-      "Our work is shaped around practical launch outcomes: a core flow that users can test, a stack that can evolve, and an AI-assisted process that gets teams live much faster.",
+      "We focus on usable releases, scalable architecture, and faster delivery.",
     eyebrow: "🛠️ Our Work",
     panelDescription:
-      "A compact four-step loop turns a rough brief into a live product. AI speeds up research, implementation support, and QA while we keep decisions and quality under control.",
+      "Our four-step process turns a brief into a working release. AI speeds execution. Senior oversight protects quality.",
     panelEyebrow: "Delivery lens",
-    panelTitle: "From rough product brief to live, testable experience.",
+    panelTitle: "From brief to scalable release.",
     primaryCta: {
       href: "/contact-us",
       label: "Plan a build",
@@ -214,34 +213,33 @@ export const workPage = {
         value: "Scope lock",
       },
       {
-        description: "Flows, screens, system choices",
+        description: "Flows, screens, systems",
         label: "02",
         value: "UX direction",
       },
       {
-        description: "Core path, AI-assisted QA",
+        description: "Core path, QA, integrations",
         label: "03",
         value: "Build sprint",
       },
       {
         description: "Deploy, docs, next steps",
         label: "04",
-        value: "Launch handoff",
+        value: "Production handoff",
       },
     ],
-    title: "We ship lean digital products that can stand up to real use",
+    title: "Built for real use and growth",
   } satisfies PageHeroContent,
   spotlight: {
-    description:
-      "Every project is run through an AI-accelerated delivery rhythm that protects speed without turning the product into a rushed prototype.",
+    description: "We protect speed without shipping fragile software.",
     eyebrow: "Delivery rhythm",
     items: [
-      "Kickoff maps constraints, user flow, and acceptance criteria",
-      "UI direction stays tied to product goals, not cosmetic drift",
-      "Implementation prioritizes the core path before secondary polish",
-      "Launch wraps with deployment notes and extension recommendations",
+      "Kickoff defines constraints and acceptance criteria",
+      "UI stays tied to product goals",
+      "Engineering focuses on the core path first",
+      "Release includes notes, guidance, and next steps",
     ],
-    title: "The work stays grounded in launch readiness at every step",
+    title: "Built for real delivery",
   } satisfies SpotlightContent,
 };
 
@@ -257,10 +255,10 @@ export const pricingPage = {
   } satisfies CtaBannerContent,
   hero: {
     description:
-      "Pick the stage you are in and the matching engagement. We separate discovery, MVP build, and post-launch work so pricing stays easy to understand.",
+      "Choose the engagement that fits your stage. We separate discovery, build, and scale-up work.",
     eyebrow: "💸 Pricing",
     panelDescription:
-      "Most teams need one of three things: clarity, a first version, or the next iteration. Each option has a clear goal, scope, and handoff.",
+      "Most teams need clarity, a first release, or the next iteration.",
     panelEyebrow: "How pricing works",
     panelTitle: "Three simple ways to work with DevDelta.",
     primaryCta: {
@@ -277,16 +275,15 @@ export const pricingPage = {
     },
     stats: [
       { label: "Need clarity", value: "Discovery" },
-      { label: "Need first version", value: "MVP build" },
-      { label: "Already launched", value: "Iteration" },
+      { label: "Need first release", value: "Product build" },
+      { label: "Need scale", value: "Iteration" },
       { label: "Always included", value: "Full code ownership" },
     ],
-    title: "Simple pricing based on the stage of your product",
+    title: "Simple pricing for each stage",
   } satisfies PageHeroContent,
   plans: [
     {
-      bestFor:
-        "You have an idea, but scope and technical direction are still unclear.",
+      bestFor: "You need scope and technical direction.",
       cadence: "Best first step",
       cta: {
         href: "/contact-us",
@@ -294,55 +291,51 @@ export const pricingPage = {
         emoji: "🧭",
         hoverEmoji: "✨",
       },
-      description:
-        "We turn a rough brief into a clear product plan before heavier build spend starts.",
+      description: "We turn a rough brief into a clear plan.",
       features: [
-        "Scope, user flow, and success criteria",
-        "Recommended stack and delivery plan",
-        "Early UI direction for version one",
+        "Scope and success criteria",
+        "Stack and delivery plan",
+        "Early UI direction",
       ],
       name: "Discovery Sprint",
-      price: "From $3,000",
+      price: "From $2,000",
       timeline: "1 focused sprint",
     },
     {
-      bestFor:
-        "You are ready to launch a first usable version for real users to test.",
+      bestFor: "You need a first release, new workflow, or scoped module.",
       cadence: "Most common choice",
       cta: {
         href: "/contact-us",
-        label: "Start MVP build",
+        label: "Start product build",
         emoji: "🚀",
         hoverEmoji: "🔥",
       },
-      description:
-        "We design, build, QA, and launch the core workflow your users need first.",
+      description: "We design, build, QA, and ship the core workflow.",
       featured: true,
       features: [
         "Core flow shipped end-to-end",
         "Design and build in one loop",
-        "Deployment help and handoff notes",
+        "Deployment and handoff guidance",
       ],
-      name: "MVP Launch",
+      name: "Core Build",
       price: "Custom quote",
-      timeline: "Around 100 delivery hours",
+      timeline: "About 100 delivery hours",
     },
     {
       bestFor:
-        "Your product is already live and now needs improvements, cleanup, or expansion.",
-      cadence: "After launch",
+        "Your product is live and needs expansion, cleanup, or integration work.",
+      cadence: "Post-release",
       cta: {
         href: "/contact-us",
         label: "Plan next phase",
         emoji: "📈",
         hoverEmoji: "⚡",
       },
-      description:
-        "We keep momentum after launch with focused improvement blocks and clear priorities.",
+      description: "We improve the product with focused follow-on blocks.",
       features: [
-        "New features or workflow improvements",
-        "Cleanup, fixes, and performance work",
-        "Prioritized next-step roadmap",
+        "Features and workflow improvements",
+        "Fixes, performance, and hardening",
+        "Clear next-step roadmap",
       ],
       name: "Growth Iteration",
       price: "Scoped after review",
@@ -351,18 +344,18 @@ export const pricingPage = {
   ] satisfies PricingPlan[],
   plansIntro: {
     description:
-      "Start with the option that matches your product right now. If you are unsure, discovery is the safest place to begin.",
+      "Start with the option that fits today. If unsure, begin with discovery.",
     eyebrow: "🧠 Common engagement models",
     title: "Choose the option that fits where you are",
   },
   spotlight: {
-    description: "No matter which option you choose, the basics stay clear.",
+    description: "Every engagement keeps the basics clear.",
     eyebrow: "Always included",
     items: [
       "Defined scope before work starts",
       "Direct access to the people building",
       "Full code ownership at handoff",
-      "A clear recommendation for what comes next",
+      "Clear next steps",
     ],
     title: "What every engagement includes",
   } satisfies SpotlightContent,
@@ -380,10 +373,10 @@ export const projectsPage = {
   } satisfies CtaBannerContent,
   hero: {
     description:
-      "This page shows representative product builds that reflect how DevDelta scopes, designs, ships, and hands off launch-ready work.",
+      "Representative builds that show how DevDelta scopes, ships, and hands off scalable software.",
     eyebrow: "Previous Work",
     panelDescription:
-      "Different products, same operating model: clear scope, AI-assisted delivery, and product decisions that stay grounded in what needs to launch first.",
+      "Different products. Same model. Clear scope. AI-assisted delivery. Production-first decisions.",
     panelEyebrow: "Selected case studies",
     panelTitle: "Proof of execution, not just a process pitch.",
     primaryCta: {
@@ -401,10 +394,10 @@ export const projectsPage = {
     stats: [
       { label: "Case studies", value: "2" },
       { label: "Delivery model", value: "AI-assisted" },
-      { label: "Priority", value: "Launch first" },
+      { label: "Priority", value: "Scale-ready" },
       { label: "Handoff", value: "Production-ready" },
     ],
-    title: "Previous work that shows how DevDelta actually ships",
+    title: "Work that shows how DevDelta ships",
   } satisfies PageHeroContent,
   projects: [
     {
@@ -415,12 +408,12 @@ export const projectsPage = {
         hoverEmoji: "🛠️",
       },
       description:
-        "A client onboarding SaaS for creative agencies that needed a faster path from signed proposal to active workspace.",
+        "A client onboarding SaaS for creative agencies. It needed faster activation and room to grow.",
       eyebrow: "Project 01",
       highlights: [
-        "Mapped the activation flow around first-value instead of admin setup",
-        "Shipped a guided setup experience, client task board, and status dashboard",
-        "Used AI-assisted interface iteration and QA to shorten review cycles",
+        "Mapped activation around first value",
+        "Shipped guided setup, tasks, and status views",
+        "Used AI-assisted iteration and QA to shorten review cycles",
       ],
       imageAlt:
         "Desk setup with laptop and monitor representing a client workspace product",
@@ -432,9 +425,8 @@ export const projectsPage = {
         { label: "Launch goal", value: "Faster onboarding" },
       ],
       outcome:
-        "The team got a demo-ready product with a clearer activation path and a system they could extend without reworking the foundation.",
-      title:
-        "StudioPilot turned agency onboarding into a guided client workspace",
+        "The team got a clearer onboarding flow and a foundation that could support larger clients.",
+      title: "StudioPilot streamlined agency onboarding",
     },
     {
       cta: {
@@ -444,45 +436,43 @@ export const projectsPage = {
         hoverEmoji: "🚀",
       },
       description:
-        "An AI workflow product for internal operations teams that needed cleaner summaries, follow-up actions, and searchable context after every conversation.",
+        "An AI workflow product for operations and support teams. It needed cleaner summaries, actions, and searchable context.",
       eyebrow: "Project 02",
       highlights: [
-        "Designed the workflow around reviewable AI output instead of blind automation",
-        "Built structured summaries, action capture, and a searchable activity timeline",
-        "Kept the first release narrow so the team could test trust before scaling features",
+        "Designed around reviewable AI output",
+        "Built summaries, action capture, and activity history",
+        "Kept the first release narrow to validate trust before scaling",
       ],
       imageAlt:
         "Modern workspace with laptop and monitor representing an AI operations workflow product",
       imageSrc:
         "https://plus.unsplash.com/premium_photo-1681487870238-4a2dfddc6bcb?auto=format&fit=crop&w=1600&q=80",
       metrics: [
-        { label: "Timeline", value: "100h MVP" },
+        { label: "Timeline", value: "100h release" },
         { label: "Primary users", value: "Ops teams" },
         { label: "Launch goal", value: "Faster follow-up" },
       ],
       outcome:
-        "The first version reduced manual wrap-up work and created a stable base for expanding AI features without confusing the team.",
-      title:
-        "SignalDesk AI helped teams move from conversation to action much faster",
+        "The first release reduced manual wrap-up work and created a solid base for broader AI workflows.",
+      title: "SignalDesk AI moved teams from conversation to action",
     },
   ] satisfies ProjectCaseStudy[],
   projectsIntro: {
     description:
-      "Two different product types, one consistent delivery pattern: scope tightly, ship the core path, and leave the product in a state that can grow.",
+      "Different product types. Same delivery model. Tight scope. Strong foundation.",
     eyebrow: "Selected projects",
     title: "Representative builds that match our current delivery model",
   },
   spotlight: {
-    description:
-      "The point is not to make every project look the same. The point is to keep the execution model reliable when the product context changes.",
+    description: "The product changes. The execution model stays reliable.",
     eyebrow: "What stays consistent",
     items: [
-      "The first release is shaped around a testable outcome, not feature sprawl",
+      "The first release balances proof and foundation",
       "AI is used to accelerate iteration, not hide weak product decisions",
-      "Design and engineering stay in one loop so quality does not drift",
-      "Every build ends with a clean handoff and a clear next-step recommendation",
+      "Design and engineering stay in one loop",
+      "Every build ends with clear handoff and next steps",
     ],
-    title: "The method scales across different kinds of products",
+    title: "A method that scales",
   } satisfies SpotlightContent,
 };
 
@@ -498,10 +488,10 @@ export const contactPage = {
   } satisfies CtaBannerContent,
   hero: {
     description:
-      "If you have a product brief, a rough concept, or just a messy set of notes, we can use our AI-first workflow to turn it into a launchable plan quickly.",
+      "Share a brief, concept, or workflow problem. We turn it into a practical delivery plan.",
     eyebrow: "💌 Contact Us",
     panelDescription:
-      "The fastest way to start is to share the product goal, intended users, and what you need to prove in the first release so we can put AI to work across the sprint immediately.",
+      "Send the goal, users, integrations, and what the first release must prove.",
     panelEyebrow: "What to send",
     panelTitle: "A clear goal beats a perfect brief every time.",
     primaryCta: {
@@ -522,7 +512,7 @@ export const contactPage = {
       { label: "Preferred input", value: "Brief" },
       { label: "Timezone overlap", value: "Global" },
     ],
-    title: "Tell us what you need to launch and we will shape the fastest path",
+    title: "Tell us what you need to build",
   } satisfies PageHeroContent,
   methods: [
     {
@@ -533,7 +523,7 @@ export const contactPage = {
         hoverEmoji: "🚀",
       },
       description:
-        "Send a short note, a deck, or a rough brief. We can work from incomplete inputs as long as the goal is clear.",
+        "Send a note, deck, or rough brief. Clear goals are enough to start.",
       eyebrow: "Email",
       title: "Share your product context",
     },
@@ -544,8 +534,7 @@ export const contactPage = {
         emoji: "📞",
         hoverEmoji: "✨",
       },
-      description:
-        "If you want a direct conversation first, we can use a quick call to align on fit, urgency, and expected scope.",
+      description: "Use a quick call to align on fit, urgency, and scope.",
       eyebrow: "Phone",
       title: "Talk through the scope",
     },
@@ -557,28 +546,27 @@ export const contactPage = {
         hoverEmoji: "👀",
       },
       description:
-        "Not ready to brief us yet? Review the operating model first and then come back once the timing feels right.",
+        "Review the process first if you are not ready to brief us yet.",
       eyebrow: "Prep",
       title: "Get familiar with the process",
     },
   ] satisfies ContactMethod[],
   methodsIntro: {
     description:
-      "Use whichever starting point feels easiest. The process is designed to reduce friction, and our AI-heavy workflow helps us move from first message to launch plan much faster.",
+      "Use the starting point that feels easiest. We move from first message to plan quickly.",
     eyebrow: "🎉 Start the conversation",
     title: "A few simple ways to reach us",
   },
   spotlight: {
     description:
-      "You do not need a polished PRD. A rough idea plus the business context is enough for the first conversation to be useful.",
+      "You do not need a polished PRD. A rough idea and context are enough.",
     eyebrow: "Before you reach out",
     items: [
-      "What problem the first release needs to solve",
-      "Who the initial users are",
-      "What success looks like after launch",
-      "Any deadline, budget, or technical constraints we should respect",
+      "The problem to solve",
+      "The initial users",
+      "What success looks like",
+      "Deadlines, budget, or technical constraints",
     ],
-    title:
-      "The more concrete the objective, the faster we can shape the sprint",
+    title: "Clear inputs speed up the process",
   } satisfies SpotlightContent,
 };

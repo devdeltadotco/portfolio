@@ -111,11 +111,11 @@ export const siteContent: SiteContent = {
   hero: {
     badge: "🚀 AI-assisted shipping partner",
     description:
-      "DevDelta is an AI-assisted MVP development studio for founders who need discovery, design, engineering, QA, and handoff aligned around a fast launch.",
+      "DevDelta is a product engineering studio for startups, growing teams, and enterprises. Fast delivery. Scalable systems.",
     guaranteeDescription:
-      "AI handles the heavy repetition across the sprint, while senior oversight keeps scope, tradeoffs, and delivery accountable from kickoff to handoff.",
+      "AI handles repetition. Senior oversight protects scope, architecture, and delivery.",
     guaranteeEyebrow: "Fixed & reliable",
-    guaranteeTitle: "Not launched in 100 hours?\nYou pay $0.",
+    guaranteeTitle: "Scoped release in 100 hours. Otherwise, $0.",
     primaryCta: {
       href: "/contact-us",
       label: "Book a Free Call",
@@ -129,60 +129,60 @@ export const siteContent: SiteContent = {
       hoverEmoji: "👀",
     },
     supportingNote:
-      "AI-first execution compresses product discovery and shipping without hiding the tradeoffs.",
+      "We move fast without sacrificing scale, maintainability, or clarity.",
     timelineBars: [
       { height: "34%", label: "Plan" },
       { height: "52%", label: "Design" },
       { height: "72%", label: "Build" },
-      { height: "92%", label: "Launch" },
+      { height: "92%", label: "Scale" },
     ],
-    title: "Launch your MVP in 100 hours",
+    title: "Launch faster. Scale with confidence.",
   },
   featureIntro: {
     description:
-      "We run AI through product discovery, interface exploration, implementation, and QA so startup teams can validate ideas with a launch-ready MVP instead of a long agency cycle.",
-    eyebrow: "✨ Built for founders with momentum",
-    title: "AI-assisted MVP development for founders moving fast",
+      "We use AI across discovery, design, implementation, and QA. Teams move faster from MVPs to enterprise systems.",
+    eyebrow: "✨ Built for speed and scale",
+    title: "From MVPs to enterprise platforms",
   },
   videoHighlight: {
     description:
-      "A tight sprint walkthrough that maps your product goals into a concrete roadmap, interface direction, and delivery sequence before the build starts.",
+      "A short walkthrough of the roadmap, interface direction, architecture, and delivery plan.",
     eyebrow: "🎬 Part 1",
-    title: "How DevDelta scopes, designs, and launches an MVP",
+    title: "How DevDelta delivers scalable products",
   },
   faq: {
     description:
-      "We work with an AI-first MVP sprint model, so expectations stay clear and delivery moves much faster from day one.",
+      "Our model fits MVPs, internal tools, and enterprise applications.",
     items: [
       {
         answer:
-          "An MVP is the smallest version of your product that proves the user flow, captures the core value, and is stable enough for real feedback.",
-        question: "What exactly counts as an MVP?",
+          "No. We build MVPs, internal tools, and scalable applications. Early releases move fast. Foundations stay ready to grow.",
+        question: "Do you only build MVPs?",
       },
       {
         answer:
-          "We handle changes through explicit tradeoffs. If something new matters more, we swap it into scope instead of silently extending the timeline.",
+          "We handle changes through tradeoffs. If priorities change, scope changes too.",
         question: "What if requirements shift mid-way?",
       },
       {
         answer:
-          "Yes. You receive the full codebase, deployment notes, and a handoff summary so your team can keep moving after launch.",
+          "Yes. You get the codebase, deployment notes, and handoff context.",
         question: "Do I own the code?",
       },
       {
         answer:
-          "The stack is chosen around speed and maintainability. For most MVPs that means Next.js, TypeScript, Tailwind, and a backend that fits the data complexity, with AI heavily used across research, scaffolding, QA, and iteration.",
+          "We choose for speed, maintainability, and scale. Common choices include Next.js, TypeScript, and a fit-for-purpose backend.",
         question: "What tech stack do you use?",
       },
       {
         answer:
-          "For the right scope, yes. The point is not cheapest delivery, it is the fastest credible route to a product you can test with users or investors.",
-        question: "Is $3,000 really the full cost?",
+          "Discovery starts at $2,000. Larger builds are priced after scope, integrations, and risk review.",
+        question: "How do pricing and scope work?",
       },
       {
         answer:
-          "Then we do not invoice the sprint. The promise is tied to locked scope, quick feedback loops, and shared accountability.",
-        question: "What if you miss the 100 hours?",
+          "We do not invoice the sprint. This depends on locked scope and fast feedback.",
+        question: "What if you miss the agreed milestone?",
       },
     ],
     primaryCta: {
@@ -197,7 +197,7 @@ export const siteContent: SiteContent = {
       emoji: "👋",
       hoverEmoji: "💌",
     },
-    title: "Agency FAQs 😄",
+    title: "FAQs",
   },
   ctaBanner: {
     cta: {
@@ -206,7 +206,7 @@ export const siteContent: SiteContent = {
       emoji: "🔥",
       hoverEmoji: "🚀",
     },
-    title: "Ready to work with us?",
+    title: "Ready to build?",
   },
   footer: {
     columns: [
@@ -233,10 +233,10 @@ export const siteContent: SiteContent = {
     contacts: [
       { label: "Phone", value: "+91 949 345 4298" },
       { label: "Email", value: "karthik@devdelta.co" },
-      { label: "Base", value: "Remote between Bangalore and San Francisco" },
+      { label: "Base", value: "The Elite Enclave, Hyderabad" },
     ],
     intro:
-      "We are a compact AI-first product and engineering partner for teams that need speed, clarity, and a launch-ready MVP without agency drag.",
+      "We are an AI-first product and engineering partner for teams that need speed, clarity, and scalable software.",
     socials: [
       {
         href: "https://www.linkedin.com",
