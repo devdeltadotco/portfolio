@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { projectsPage } from "@/content/pages";
+import { portfolioProjects } from "@/content/projects";
 import { absoluteUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -27,10 +27,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       changeFrequency: "monthly",
-      images: projectsPage.projects.map((project) => project.imageSrc),
       lastModified,
       priority: 0.85,
       url: absoluteUrl("/projects"),
+    },
+    {
+      changeFrequency: "monthly",
+      lastModified,
+      priority: 0.8,
+      url: absoluteUrl("/projects/all"),
     },
     {
       changeFrequency: "weekly",
@@ -44,5 +49,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
       url: absoluteUrl("/contact-us"),
     },
+    {
+      changeFrequency: "yearly",
+      lastModified,
+      priority: 0.35,
+      url: absoluteUrl("/terms"),
+    },
+    {
+      changeFrequency: "yearly",
+      lastModified,
+      priority: 0.35,
+      url: absoluteUrl("/privacy"),
+    },
+    {
+      changeFrequency: "yearly",
+      lastModified,
+      priority: 0.35,
+      url: absoluteUrl("/cookies"),
+    },
+    ...portfolioProjects.map((project) => ({
+      changeFrequency: "monthly" as const,
+      lastModified,
+      priority: 0.75,
+      url: absoluteUrl(`/projects/${project.slug}`),
+    })),
   ];
 }

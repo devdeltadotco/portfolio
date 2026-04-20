@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+    <!-- Outer triangle -->
+    <path
+        d="M256 80L426 390c7 13-2 30-17 30H103c-15 0-24-17-17-30L256 80Z"
+        stroke="rgba(45,45,45,0.72)"
+        stroke-width="32"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+
+    <!-- Inner triangle -->
+    <path
+        d="M256 160L332 300c5 9-2 20-12 20H192c-10 0-17-11-12-20L256 160Z"
+        fill="rgb(255,158,0)"
+    />
+</svg>

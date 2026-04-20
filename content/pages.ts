@@ -1,3 +1,4 @@
+import { portfolioProjects } from "@/content/projects";
 import type { ActionLink, CtaBannerContent } from "@/content/site";
 
 export type HeroStat = {
@@ -49,23 +50,6 @@ export type PricingPlan = {
   timeline: string;
 };
 
-export type ProjectMetric = {
-  label: string;
-  value: string;
-};
-
-export type ProjectCaseStudy = {
-  cta: ActionLink;
-  description: string;
-  eyebrow: string;
-  highlights: string[];
-  imageAlt: string;
-  imageSrc: string;
-  metrics: ProjectMetric[];
-  outcome: string;
-  title: string;
-};
-
 export type ContactMethod = {
   cta: ActionLink;
   description: string;
@@ -96,7 +80,7 @@ export const aboutPage = {
   cardsIntro: {
     description:
       "We stay small and AI-first. Strategy, design, and engineering stay aligned.",
-    eyebrow: "⚙️ How we work",
+    eyebrow: "How we work",
     title: "A lean team. High ownership.",
   },
   ctaBanner: {
@@ -111,7 +95,7 @@ export const aboutPage = {
   hero: {
     description:
       "DevDelta is an AI-first product squad for teams that need fast delivery, sound architecture, and software that scales.",
-    eyebrow: "🧠 About DevDelta",
+    eyebrow: "About DevDelta",
     panelDescription:
       "Strategy, design, and implementation stay in one loop. Nothing gets lost in handoffs.",
     panelEyebrow: "What teams get",
@@ -174,7 +158,7 @@ export const workPage = {
   cardsIntro: {
     description:
       "We use AI to speed research, design, engineering, and QA. Quality stays controlled.",
-    eyebrow: "🚀 What we ship",
+    eyebrow: "What we ship",
     title: "What we build",
   },
   ctaBanner: {
@@ -189,7 +173,7 @@ export const workPage = {
   hero: {
     description:
       "We focus on usable releases, scalable architecture, and faster delivery.",
-    eyebrow: "🛠️ Our Work",
+    eyebrow: "Our Work",
     panelDescription:
       "Our four-step process turns a brief into a working release. AI speeds execution. Senior oversight protects quality.",
     panelEyebrow: "Delivery lens",
@@ -256,7 +240,7 @@ export const pricingPage = {
   hero: {
     description:
       "Choose the engagement that fits your stage. We separate discovery, build, and scale-up work.",
-    eyebrow: "💸 Pricing",
+    eyebrow: "Pricing",
     panelDescription:
       "Most teams need clarity, a first release, or the next iteration.",
     panelEyebrow: "How pricing works",
@@ -345,7 +329,7 @@ export const pricingPage = {
   plansIntro: {
     description:
       "Start with the option that fits today. If unsure, begin with discovery.",
-    eyebrow: "🧠 Common engagement models",
+    eyebrow: "Common engagement models",
     title: "Choose the option that fits where you are",
   },
   spotlight: {
@@ -373,107 +357,97 @@ export const projectsPage = {
   } satisfies CtaBannerContent,
   hero: {
     description:
-      "Representative builds that show how DevDelta scopes, ships, and hands off scalable software.",
-    eyebrow: "Previous Work",
+      "A curated set of DevDelta projects that shows the range of products, internal tools, civic workflows, and platforms shipped for clients.",
+    eyebrow: "Featured Projects",
     panelDescription:
-      "Different products. Same model. Clear scope. AI-assisted delivery. Production-first decisions.",
-    panelEyebrow: "Selected case studies",
-    panelTitle: "Proof of execution, not just a process pitch.",
+      "These projects show the kinds of systems we can scope, design, and ship: content platforms, internal tools, civic workflows, AI products, and enterprise modernization work.",
+    panelEyebrow: "Why it matters",
+    panelTitle:
+      "Proof that we can build products with real complexity and real business use.",
     primaryCta: {
+      href: "/projects/all",
+      label: "Browse all projects",
+      emoji: "🗂️",
+      hoverEmoji: "👀",
+    },
+    secondaryCta: {
       href: "/contact-us",
       label: "Discuss your product",
       emoji: "🧩",
       hoverEmoji: "🚀",
     },
-    secondaryCta: {
-      href: "/pricing",
-      label: "See pricing",
-      emoji: "💸",
-      hoverEmoji: "👀",
-    },
     stats: [
-      { label: "Case studies", value: "2" },
-      { label: "Delivery model", value: "AI-assisted" },
-      { label: "Priority", value: "Scale-ready" },
-      { label: "Handoff", value: "Production-ready" },
+      { label: "Projects shipped", value: String(portfolioProjects.length) },
+      { label: "Client range", value: "Startup to enterprise" },
+      { label: "Build types", value: "Web, AI, ops" },
+      { label: "Delivery posture", value: "Launch-ready" },
     ],
-    title: "Work that shows how DevDelta ships",
+    title: "Selected work that shows range, depth, and delivery quality",
   } satisfies PageHeroContent,
-  projects: [
-    {
-      cta: {
-        href: "/contact-us",
-        label: "Build something similar",
-        emoji: "⚡",
-        hoverEmoji: "🛠️",
-      },
-      description:
-        "A client onboarding SaaS for creative agencies. It needed faster activation and room to grow.",
-      eyebrow: "Project 01",
-      highlights: [
-        "Mapped activation around first value",
-        "Shipped guided setup, tasks, and status views",
-        "Used AI-assisted iteration and QA to shorten review cycles",
-      ],
-      imageAlt:
-        "Desk setup with laptop and monitor representing a client workspace product",
-      imageSrc:
-        "https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      metrics: [
-        { label: "Timeline", value: "3 weeks" },
-        { label: "Core modules", value: "5" },
-        { label: "Launch goal", value: "Faster onboarding" },
-      ],
-      outcome:
-        "The team got a clearer onboarding flow and a foundation that could support larger clients.",
-      title: "StudioPilot streamlined agency onboarding",
-    },
-    {
-      cta: {
-        href: "/contact-us",
-        label: "Plan a similar sprint",
-        emoji: "📈",
-        hoverEmoji: "🚀",
-      },
-      description:
-        "An AI workflow product for operations and support teams. It needed cleaner summaries, actions, and searchable context.",
-      eyebrow: "Project 02",
-      highlights: [
-        "Designed around reviewable AI output",
-        "Built summaries, action capture, and activity history",
-        "Kept the first release narrow to validate trust before scaling",
-      ],
-      imageAlt:
-        "Modern workspace with laptop and monitor representing an AI operations workflow product",
-      imageSrc:
-        "https://plus.unsplash.com/premium_photo-1681487870238-4a2dfddc6bcb?auto=format&fit=crop&w=1600&q=80",
-      metrics: [
-        { label: "Timeline", value: "100h release" },
-        { label: "Primary users", value: "Ops teams" },
-        { label: "Launch goal", value: "Faster follow-up" },
-      ],
-      outcome:
-        "The first release reduced manual wrap-up work and created a solid base for broader AI workflows.",
-      title: "SignalDesk AI moved teams from conversation to action",
-    },
-  ] satisfies ProjectCaseStudy[],
   projectsIntro: {
     description:
-      "Different product types. Same delivery model. Tight scope. Strong foundation.",
-    eyebrow: "Selected projects",
-    title: "Representative builds that match our current delivery model",
+      "The featured page keeps only a short curated set. The archive page holds the complete portfolio and every project has its own detail route.",
+    eyebrow: "Highlighted case studies",
+    title: "A smaller featured set from a much larger archive",
   },
   spotlight: {
-    description: "The product changes. The execution model stays reliable.",
-    eyebrow: "What stays consistent",
+    description:
+      "The industries change, but the delivery pattern stays consistent: scope the real problem, build the core path, and leave behind something teams can run.",
+    eyebrow: "Across the portfolio",
     items: [
-      "The first release balances proof and foundation",
-      "AI is used to accelerate iteration, not hide weak product decisions",
-      "Design and engineering stay in one loop",
-      "Every build ends with clear handoff and next steps",
+      "Featured work is curated, not exhaustive",
+      "Every project route now carries stack, services, outcome, and founder review placeholder",
+      "Visual placeholders are tailored per project so the archive feels distinct without needing original screenshots",
+      "All project pages are generated from one centralized dataset",
     ],
-    title: "A method that scales",
+    title: "A portfolio structure that can scale with the work",
   } satisfies SpotlightContent,
+};
+
+export const allProjectsPage = {
+  ctaBanner: {
+    cta: {
+      href: "/contact-us",
+      label: "Plan a similar build",
+      emoji: "🚀",
+      hoverEmoji: "✨",
+    },
+    title: "Need a product, platform, or internal tool with similar depth?",
+  } satisfies CtaBannerContent,
+  hero: {
+    description:
+      "The full archive spans content systems, OTT platforms, AI extensions, civic registration tools, enterprise modernization, and operations software.",
+    eyebrow: "All Projects",
+    panelDescription:
+      "Use this page when you want the complete portfolio instead of the shorter curated view. Every card links into a dedicated project page.",
+    panelEyebrow: "Archive view",
+    panelTitle: "The full DevDelta project archive in one place.",
+    primaryCta: {
+      href: "/projects",
+      label: "Back to featured",
+      emoji: "🔙",
+      hoverEmoji: "👀",
+    },
+    secondaryCta: {
+      href: "/contact-us",
+      label: "Start a conversation",
+      emoji: "💬",
+      hoverEmoji: "🚀",
+    },
+    stats: [
+      { label: "Projects", value: String(portfolioProjects.length) },
+      { label: "Categories", value: "10+" },
+      { label: "Clients", value: "Startup to enterprise" },
+      { label: "Detail routes", value: String(portfolioProjects.length) },
+    ],
+    title: "Every delivered project, organized into a browsable archive",
+  } satisfies PageHeroContent,
+  projectsIntro: {
+    description:
+      "This is the full list of projects, not the shortened featured selection.",
+    eyebrow: "Project archive",
+    title: "All delivered projects",
+  },
 };
 
 export const contactPage = {
@@ -489,7 +463,7 @@ export const contactPage = {
   hero: {
     description:
       "Share a brief, concept, or workflow problem. We turn it into a practical delivery plan.",
-    eyebrow: "💌 Contact Us",
+    eyebrow: "Contact Us",
     panelDescription:
       "Send the goal, users, integrations, and what the first release must prove.",
     panelEyebrow: "What to send",
@@ -554,7 +528,7 @@ export const contactPage = {
   methodsIntro: {
     description:
       "Use the starting point that feels easiest. We move from first message to plan quickly.",
-    eyebrow: "🎉 Start the conversation",
+    eyebrow: "Start the conversation",
     title: "A few simple ways to reach us",
   },
   spotlight: {

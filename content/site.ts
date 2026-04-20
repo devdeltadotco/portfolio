@@ -222,11 +222,11 @@ export const siteContent: SiteContent = {
         ],
       },
       {
-        title: "Licenses",
+        title: "Legal",
         links: [
-          { href: "/pricing", label: "Terms" },
-          { href: "/pricing", label: "Privacy" },
-          { href: "/pricing", label: "Cookies" },
+          { href: "/terms", label: "Terms" },
+          { href: "/privacy", label: "Privacy" },
+          { href: "/cookies", label: "Cookies" },
         ],
       },
     ],

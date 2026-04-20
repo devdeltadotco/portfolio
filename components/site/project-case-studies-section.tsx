@@ -1,7 +1,9 @@
-import Image from "next/image";
+import Link from "next/link";
 
-import type { ProjectCaseStudy, SectionIntro } from "@/content/pages";
+import type { PortfolioProject } from "@/content/projects";
+import type { SectionIntro } from "@/content/pages";
 
+import { ProjectVisual } from "@/components/site/project-visual";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
@@ -9,11 +11,12 @@ import { Heading } from "@/components/ui/heading";
 import { InteractiveCard } from "@/components/ui/interactive-card";
 import { Reveal } from "@/components/ui/reveal";
 import { Section } from "@/components/ui/section";
+import { getProjectHref } from "@/content/projects";
 import { cn } from "@/lib/cn";
 
 type ProjectCaseStudiesSectionProps = {
   intro: SectionIntro;
-  projects: ProjectCaseStudy[];
+  projects: PortfolioProject[];
 };
 
 export function ProjectCaseStudiesSection({
@@ -24,13 +27,24 @@ export function ProjectCaseStudiesSection({
     <Section>
       <Container>
         <Reveal>
-          <Heading
-            description={intro.description}
-            eyebrow={intro.eyebrow}
-            title={intro.title}
-            titleClassName="max-w-[13ch]"
-          />
+          <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+            <Heading
+              description={intro.description}
+              eyebrow={intro.eyebrow}
+              title={intro.title}
+              titleClassName="max-w-[13ch]"
+            />
+            <Button
+              emoji="🗂️"
+              hoverEmoji="👀"
+              href="/projects/all"
+              variant="secondary"
+            >
+              View all projects
+            </Button>
+          </div>
         </Reveal>
+
         <div className="mt-8 space-y-10 lg:space-y-12">
           {projects.map((project, index) => {
             const isDarkMain = index % 2 === 0;
@@ -38,13 +52,13 @@ export function ProjectCaseStudiesSection({
             const sideTone = isDarkMain ? "light" : "dark";
 
             return (
-              <Reveal delay={0.08 * index} key={project.title}>
+              <Reveal delay={0.08 * index} key={project.slug}>
                 <div className="relative">
                   {index > 0 ? (
                     <div className="mb-10 flex items-center gap-4 lg:mb-12">
                       <div className="h-px flex-1 bg-line" />
                       <span className="rounded-full border border-line bg-surface-strong/84 px-4 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-muted">
-                        Next case study
+                        Next featured project
                       </span>
                       <div className="h-px flex-1 bg-line" />
                     </div>
@@ -60,7 +74,7 @@ export function ProjectCaseStudiesSection({
                           tone={mainTone}
                         >
                           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">
-                            {project.eyebrow}
+                            Featured case study
                           </p>
                           <h2
                             className={cn(
@@ -70,7 +84,7 @@ export function ProjectCaseStudiesSection({
                                 : "text-ink",
                             )}
                           >
-                            {project.title}
+                            {project.client}
                           </h2>
                           <p
                             className={cn(
@@ -80,25 +94,9 @@ export function ProjectCaseStudiesSection({
                                 : "text-muted",
                             )}
                           >
-                            {project.description}
+                            {project.summary}
                           </p>
-                          <div
-                            className={cn(
-                              "mt-8 overflow-hidden rounded-[28px] border",
-                              isDarkMain
-                                ? "border-contrast-foreground/10 bg-contrast-foreground/6"
-                                : "border-line bg-surface-strong/72",
-                            )}
-                          >
-                            <Image
-                              alt={project.imageAlt}
-                              className="aspect-[16/10] h-auto w-full object-cover"
-                              height={780}
-                              priority={index === 0}
-                              src={project.imageSrc}
-                              width={1200}
-                            />
-                          </div>
+                          <ProjectVisual className="mt-8" project={project} />
                           <div className="mt-8 grid gap-3 sm:grid-cols-3">
                             {project.metrics.map((metric) => (
                               <div
@@ -133,14 +131,32 @@ export function ProjectCaseStudiesSection({
                               </div>
                             ))}
                           </div>
-                          <div className="mt-8">
+                          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                             <Button
-                              emoji={project.cta.emoji}
-                              hoverEmoji={project.cta.hoverEmoji}
-                              href={project.cta.href}
+                              className={
+                                isDarkMain
+                                  ? "border-contrast-foreground bg-contrast-foreground text-contrast shadow-[0_20px_48px_rgba(237,246,249,0.14)] hover:bg-contrast-foreground/92"
+                                  : undefined
+                              }
+                              emoji="🔎"
+                              hoverEmoji="👀"
+                              href={getProjectHref(project.slug)}
                               variant={isDarkMain ? "secondary" : "primary"}
                             >
-                              {project.cta.label}
+                              View case study
+                            </Button>
+                            <Button
+                              emoji="💬"
+                              hoverEmoji="🚀"
+                              href="/contact-us"
+                              className={
+                                isDarkMain
+                                  ? "border-contrast-foreground/18 bg-contrast-foreground/10 text-contrast-foreground hover:bg-contrast-foreground/16"
+                                  : undefined
+                              }
+                              variant="secondary"
+                            >
+                              Build something similar
                             </Button>
                           </div>
                         </Card>
@@ -190,6 +206,44 @@ export function ProjectCaseStudiesSection({
                             >
                               {project.outcome}
                             </p>
+                            <div className="mt-6">
+                              <p
+                                className={cn(
+                                  "text-xs font-semibold uppercase tracking-[0.16em]",
+                                  sideTone === "dark"
+                                    ? "text-contrast-foreground/56"
+                                    : "text-muted",
+                                )}
+                              >
+                                Stack preview
+                              </p>
+                              <div className="mt-3 flex flex-wrap gap-2">
+                                {project.stack.slice(0, 4).map((item) => (
+                                  <span
+                                    className={cn(
+                                      "rounded-full border px-3 py-1 text-xs",
+                                      sideTone === "dark"
+                                        ? "border-contrast-foreground/12 bg-contrast-foreground/8 text-contrast-foreground/84"
+                                        : "border-line bg-surface-strong/72 text-ink",
+                                    )}
+                                    key={item}
+                                  >
+                                    {item}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                            <Link
+                              className={cn(
+                                "mt-6 inline-flex text-sm font-semibold underline-offset-4 hover:underline",
+                                sideTone === "dark"
+                                  ? "text-contrast-foreground"
+                                  : "text-ink",
+                              )}
+                              href={getProjectHref(project.slug)}
+                            >
+                              Open the full project page
+                            </Link>
                           </Card>
                         </InteractiveCard>
                       </div>
